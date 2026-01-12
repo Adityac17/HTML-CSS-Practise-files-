@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f4f7f6; 
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- NEW HEADER CSS --- */
+        header {
+            background-color: #0d1b2a; 
+            color: #ffffff;
+            padding: 30px 40px;
+            border-bottom: 5px solid #00b4d8; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-center { text-align: center; z-index: 2; }
+        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
+        header p { margin: 5px 0 0; color: #a0aec0; font-size: 1em; }
+
+        .nav-group { position: absolute; display: flex; gap: 30px; }
+        .nav-group.left { left: 50px; }
+        .nav-group.right { right: 50px; }
+
+        .nav-group a {
+            color: #e0e1dd;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.95em;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-group a:hover { color: #00b4d8; } 
+
+        @media (max-width: 900px) {
+            header { flex-direction: column; gap: 20px; padding: 30px 20px; position: static;}
+            .nav-group { position: static; width: 100%; justify-content: center; }
+        }
+        /* ---------------------- */
+
+        footer {
+            background-color: #0d1b2a;
+            color: #778da9;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Simple container for the page content */
+        .page-content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .page-2 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        div {
+            display: grid;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-group left">
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+        </div>
+
+        <div class="header-center">
+            <h1>Aditya Sunil Chouksey</h1>
+            <p>B.Tech Computer Science Student | Python & AI Enthusiast</p>
+        </div>
+
+        <div class="nav-group right">
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <div class="page-content">
+        <h1>About Me</h1>
+        <p>@aditya_c1771- Follow me on Instagram
+            <br>
+            🔭 I'm currently working on Python Masterclass by Tim Buchalka 
+            <br>
+            🤖also i am creating my own Jarvis AI and automating it using n8n 
+            <br>
+            🌱 I'm currently learning Python, React Native & Node.js
+            <br>
+            👯 I'm looking to collaborate on open source projects related to python, ML, AI Automation etc
+            <br>
+            🤝 I'm looking for help with learning system designs
+            <br>
+            📫 How to reach me 2025.adityac@isu.ac.in
+            <br>
+            ⚡Fun fact I am actually fell in love with cooking</p>
+            <br>
+    </div>
+
+    <div class="page-2">
+        <h1>My Skills</h1>
+
+        <h3>Education</h3>
+        <p>
+          <strong>B.Tech in CSE</strong><br />
+          ITM Skills University<br />
+          <em>2025 - 2029</em>
+        </p>
+        <hr />
+
+        <h3>Technical Skills</h3>
+        <strong>Languages</strong>
+        <ul>
+          <li>Python</li>
+          <li>C++</li>
+          <li>JavaScript</li>
+        </ul>
+
+        <strong>Web</strong>
+        <ul>
+          <li>HTML5 / CSS3</li>
+          <li>React Basics</li>
+        </ul>
+
+        <strong>Tools</strong>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+        </p>
+    </div>
+    <footer>
+        <p>© 2026 Aditya Sunil Chouksey | Built with HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
