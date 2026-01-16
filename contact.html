@@ -2,131 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #f4f7f6; 
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #0d1b2a; 
-            color: #ffffff;
-            padding: 30px 40px;
-            border-bottom: 5px solid #00b4d8; 
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative; 
-            
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        /* Center Name Container */
-        .header-center {
-            text-align: center;
-            z-index: 2; 
-        }
-
-        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
-        header p { margin: 5px 0 0; color: #a0aec0; font-size: 1em; }
-
-        /* Side Navigation Groups */
-        .nav-group {
-            position: absolute; 
-            display: flex;
-            gap: 30px; 
-        }
-
-        .nav-group.left { left: 50px; }
-        .nav-group.right { right: 50px; }
-
-        .nav-group a {
-            color: #e0e1dd;
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.95em;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        .nav-group a:hover { color: #00b4d8; } 
-
-        /* Mobile Responsiveness */
-        @media (max-width: 900px) {
-            header { flex-direction: column; gap: 20px; padding: 30px 20px; position: static;}
-            .nav-group { position: static; width: 100%; justify-content: center; }
-        }
-        /* ---------------------- */
-
-        /* Footer */
-        footer {
-            background-color: #0d1b2a;
-            color: #778da9;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        /* Page Specific Styles */
-        .page-content {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .contact {
-            text-align: center;
-            padding: 40px;
-            
-        }
-    </style>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
+
 <body>
+    <nav>
+        <h2 class="sidebar-title">Web Devs</h2>
+        
+        <a href="index.html">Introduction</a>
+        <a href="index.html#start">Getting Started</a>
+        <a href="index.html#code">Code Snippets</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
 
-    <header>
-        <div class="nav-group left">
-            <a href="index.html">Home</a>
-            <a href="project.html">Projects</a>
-        </div>
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <br>
+            <p>Fill out the form below to get in touch with us.</p>
+            <br>
+            
+            <form>
+                <label>Name:</label>
+                <input type="text" placeholder="Your Name">
+                
+                <label>Email:</label>
+                <input type="email" placeholder="Your Email">
+                
+                <label>Message:</label>
+                <textarea rows="5" placeholder="How can i learn more about web deveelopment"></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
 
-        <div class="header-center">
-            <h1>Aditya Sunil Chouksey</h1>
-            <p>B.Tech Computer Science Student | Python & AI Enthusiast</p>
-        </div>
+        </section>
 
-        <div class="nav-group right">
-            <a href="skills.html">Skills</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </header>
+        <footer>
+            <p>© 2026 Aditya Sunil Chouksey | Built with HTML & CSS</p>
+        </footer>
 
-<div class="contact">
-    <h3>Contact Info</h3>
-        <p> 2025.adityac@isu.ac.in</p>
-        <p><a href="www.linkedin.com/in/adityac17"><img src="./linkedin.png" alt=""></a></p>
-        <p>
-           <a href="https://github.com/Adityac17/Adityac17"><img src="./github.png" alt=""></a>
-        </p>
-
-
-</div>
-
-    <footer>
-        <p>© 2026 Aditya Sunil Chouksey | Built with HTML & CSS</p>
-    </footer>
-
-</body>
+    </main>
 </body>
 </html>
