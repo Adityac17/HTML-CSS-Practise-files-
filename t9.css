@@ -1,0 +1,9 @@
+.task9 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+
+.task8 { grid-column: span 6; background: purple; }
+.task9 { grid-column: span 3; background: orange; }

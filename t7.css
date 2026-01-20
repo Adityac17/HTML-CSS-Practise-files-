@@ -1,0 +1,15 @@
+.task4 {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+    gap: 10px;
+}
+
+.task1 { grid-area: header; background: red; }
+.task2 { grid-area: sidebar; background: green; }
+.task3 { grid-area: content; background: blue; }
+.task4 { grid-area: footer; background: pink; }
+
+/* here i have used multiple class name as i was expermienting with different class names */
