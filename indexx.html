@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Nature Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fun Nature Gallery</h1>
+        <p>Explore beautiful free nature photos while learning CSS Grid!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Landscapes</a></li>
+            <li><a href="#">Forests</a></li>
+            <li><a href="#">Mountains</a></li>
+            <li><a href="#">Water</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <div class="sidebar">
+            <div class="filter-section">
+                <h2>Filter Nature</h2>
+                <p>Try selecting:</p>
+                <ul class="checkbox-list">
+                    <li><input type="checkbox" id="forest"> <label for="forest">Forest</label></li>
+                    <li><input type="checkbox" id="mountains"> <label for="mountains">Mountains</label></li>
+                    <li><input type="checkbox" id="water"> <label for="water">Water</label></li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h4>Why this is perfect for Grid class:</h4>
+                <ul class="info-list">
+                    <li><strong>main</strong> is already a 2-column grid (sidebar + gallery).</li>
+                    <li><strong>.gallery</strong> is a responsive grid of cards.</li>
+                    <li>Hover effects make it interactive and fun.</li>
+                    <li>Sidebar filters give a "real gallery feel".</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="gallery">
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/vertical-shot-narrow-pathway-forest-with-lot-tall-green-trees_181624-20997.jpg?semt=ais_hybrid&w=740&q=80" alt="Forest Path">
+                <h4>Forest Path</h4>
+            </div>
+
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/485371557/photo/twilight-at-spirit-island.jpg?s=612x612&w=0&k=20&c=FSGliJ4EKFP70Yjpzso0HfRR4WwflC6GKfl4F3Hj7fk=" alt="Mountain Lake">
+                <h4>Mountain Lake</h4>
+            </div>
+
+            <div class="card">
+                <div class="broken-img">
+                    <span>Sunset Road</span>
+                </div>
+                <h4>Sunset Road</h4>
+            </div>
+
+            <div class="card">
+                <img src="https://gti.images.tshiftcdn.com/11272861/x/0/a-guide-to-waterfalls-in-iceland-geology-regions-and-visiting-tips-1.jpg?ixlib=php-3.3.0&w=883" alt="Waterfall View">
+                <h4>Waterfall View</h4>
+            </div>
+
+             <div class="card">
+                <div class="broken-img">
+                     <span>Green Forest</span>
+                </div>
+                <h4>Green Forest</h4>
+            </div>
+
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIcbH1EqijYzQWTQUj0lEQXVD6bW4xX6PfsA&s" alt="Sunset Beach">
+                <h4>Sunset Beach</h4>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nature Gallery — CSS Grid Practice!</p>
+    </footer>
+
+</body>
+</html>
