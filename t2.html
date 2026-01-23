@@ -1,36 +1,38 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 02</title>
-    <link rel="stylesheet" href="./t2.css">
+    <title>Task 2: Traffic Signal</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; height: 100vh; background-color: #f0f0f0; }
+
+        .signal-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .light {
+            transition: filter 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .light-red:hover { opacity: 1; filter: drop-shadow(0 0 15px red); }
+        .light-yellow:hover { opacity: 1; filter: drop-shadow(0 0 15px yellow); }
+        .light-green:hover { opacity: 1; filter: drop-shadow(0 0 15px #00e676); }
+    </style>
 </head>
 <body>
-    
-    <div class="grid-2"> 
-        <div class="task1">Task 1</div>
-        <div class="task2">Task 2</div>
-        <div class="task3">Task 3</div>
-        <div class="task4">Task 4</div>
-        <div class="task5">Task 5</div>
-        <div class="task6">Task 6</div>
-
-    </div>
-
-    <p>
-            Reference used from the list of materials provided by you ma'am
+ 
+        <svg class="signal-svg" viewBox="0 0 150 300" preserveAspectRatio="xMidYMid meet">
+            <rect x="70" y="160" width="10" height="140" fill="#555" />
             
-        Answer 01:- fr stands for freespace which is a unit used in css grid only 
+            <rect x="60" y="290" width="30" height="10" fill="#333" />
 
-        Answer 02:- css grid creates 1 cols only
-
-        Answer 03:- the cols are shrinked ( they get nrrower )
-
-        Answer 04:- the items adjust, never overflows
-
-        Answr 05:- bcs fr adaptso different screen types whereas px remains the same for each screen type
-
-    </p>
+            <rect x="50" y="50" width="50" height="110" fill="#333" rx="15" />
+            
+            <circle class="light light-red" cx="75" cy="75" r="12" fill="#ff4444" opacity="0.4" />
+            <circle class="light light-yellow" cx="75" cy="105" r="12" fill="#ffeb3b" opacity="0.4" />
+            <circle class="light light-green" cx="75" cy="135" r="12" fill="#00e676" opacity="0.4" />
+        </svg>
+        <text x="75" y="290" font-size="12" text-anchor="middle" fill="black">Hover lights to glow</text>
+    </svg>
 </body>
 </html>

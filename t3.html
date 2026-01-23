@@ -1,34 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 03</title>
-    <link rel="stylesheet" href="./t3.css">
+    <title>Task 3: House Sketch</title>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; height: 100vh; background-color: #e0e0e0; }
+
+        .house-svg { width: 100%; height: 100%; }
+
+        .door {
+            fill: #8D6E63;
+            filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.4));
+        }
+
+        .roof {
+            fill: url(#roofGradient);
+            stroke: black;
+            stroke-width: 2;
+        }
+    </style>
 </head>
 <body>
-    <div class="grid-3"> 
-        <div class="task1">Task 1</div>
-        <div class="task2">Task 2</div>
-        <div class="task3">Task 3</div>
-        <div class="task4">Task 4</div>
-        <div class="task5">Task 5</div>
-        <div class="task6">Task 6</div>
+    <svg class="house-svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+        <defs>
+            <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#D32F2F;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8B0000;stop-opacity:1" />
+            </linearGradient>
+        </defs>
 
-            <p>
-                Answer 01:- the px layout breaks faster in smaller screen
-                as you can see on h3.css line no 3
-
-                Answer 02:- the fr layout adjust automatically to the screen size 
-
-                Answer 03:- bcz fixed layout creates a horizontal scrolling bar on devices 
-                like phone, mini-ipad etcc instead of adjusting automatically to the scrrens size
-
-                Answr 04:- fixed columns are great for elements that must 
-                            not squish like idebar navigation
-
-                Answer 05:- fr unit is the correct choice for a website with responsive size adjustment
-            </p>
-    </div>
+        <rect x="75" y="120" width="150" height="120" fill="#FFE0B2" stroke="black" />
+        <rect class="door" x="135" y="170" width="30" height="70" />
+        <polygon class="roof" points="60,120 150,50 240,120" />
+    </svg>
 </body>
 </html>

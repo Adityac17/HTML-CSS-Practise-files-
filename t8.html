@@ -1,29 +1,30 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 08</title>
-    <link rel="stylesheet" href="./t8.css">
+<style>
+  .car {
+    filter: drop-shadow(0 8px 10px gray);
+  }
+</style>
 </head>
-<body>
-    <div class="task8">
-    Task 8 ( content same as task 4 but expermienting with gap values )
-    <br> This is a lot of text to test the auto row. 
-    <br> The row should grow to fit all of this content!
-    <br> loreo wqaser werete qert
-            <p>
-                Answer 01:- It solves the problem of having to write 
-                multiple @media queries for different screen sizes.
 
-                Answer 02:- it ensures items never get too small to read
+<body style="margin:0">
 
-                Answer 03:- no bcz we set a minimum width
+<svg width="100%" height="100%" viewBox="0 0 1000 600">
 
-                Answer 04:- yes on a mobile screen it will become a single column layout
+  <g class="car">
+    <rect x="100" y="350" width="200" height="60" fill="blue"/>
+    <circle cx="140" cy="420" r="20" fill="black"/>
+    <circle cx="260" cy="420" r="20" fill="black"/>
 
-                Answer 05:- Because the browser is making the layout decisions in real-time based on the available space
-            </p>
-    </div>
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="0 0" to="600 0"
+      dur="3s" repeatCount="indefinite"/>
+  </g>
+
+</svg>
+
 </body>
 </html>

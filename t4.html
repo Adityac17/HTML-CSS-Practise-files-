@@ -1,31 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 04</title>
-    <link rel="stylesheet" href="./t4.css">
+<style>
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+}
+svg{
+  width:100vw;
+  height:100vh;
+}
+.face{
+  filter: drop-shadow(0 0 25px rgb(123, 255, 0));
+}
+</style>
 </head>
+
 <body>
-    <div class="task4">
-    Task 4 
-    <br> This is a lot of text to test the auto row. 
-    <br> The row should grow to fit all of this content!
-    <br> loreo wqaser werete qert
-            <p>
-                Answer 01:- It tells the row to size itself automatically 
-                    based on the size of the content inside it.
 
-                Answer 02:- The row set to auto . 
-                The row set to 100px will cut off content or overflow if
-                 you put too much text in it.
+<svg viewBox="0 0 1920 1080">
 
-                Answer 03:- yes rows can different heights 
+  <circle cx="960" cy="540" r="300" fill="yellow" class="face"/>
 
-                Answer 04:- If the row is auto it will keep growing until all the content fits.
+  <circle cx="860" cy="470" r="20" fill="black">
+    <animate
+      attributeName="r"
+      values="20;20;5;20"
+      keyTimes="0;0.9;0.95;1"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
 
-                Answer 05:- Headder/Footer and Main Content
-            </p>
-    </div>
+  <circle cx="1060" cy="470" r="20" fill="black">
+    <animate
+      attributeName="r"
+      values="20;20;5;20"
+      keyTimes="0;0.9;0.95;1"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <line x1="860" y1="650" x2="1060" y2="650"
+        stroke="black" stroke-width="20"/>
+
+</svg>
+
 </body>
 </html>

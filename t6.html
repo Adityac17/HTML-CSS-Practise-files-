@@ -1,29 +1,36 @@
-  <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 06</title>
-    <link rel="stylesheet" href="./t6.css">
+<style>
+  .ball {
+    filter: drop-shadow(0 0 15px red);
+  }
+</style>
 </head>
-<body>
-    <div class="task6">
-    Task 6 ( content same as task 4 but expermienting with gap values )
-    <br> This is a lot of text to test the auto row. 
-    <br> The row should grow to fit all of this content!
-    <br> loreo wqaser werete qert
-            <p>
-                Answer 01:- They are the numbered lines that divide the rows and columns.
 
-                Answer 02:- It spans 2 columns
+<body style="margin:0">
 
-                Answer 03:- They get pushed to the next available empty cell
+<svg width="100%" height="100%" viewBox="0 0 1000 600">
 
-                Answer 04:- yes 2 items can overlap 
+  <circle cx="100" cy="300" r="30" fill="red" class="ball">
 
-                Answer 05:-It is used for Headlines,
-                 Hero Images, or Featured Content that needs to be wider than the standard grid cells.
-            </p>
-    </div>
+    <animate
+      attributeName="cx"
+      from="100" to="900"
+      dur="2s"
+      repeatCount="indefinite"/>
+
+
+    <animateTransform
+      attributeName="transform"
+      type="scale"
+      values="1 1; 1.2 0.8; 1 1"
+      dur="1s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+</svg>
+
 </body>
 </html>

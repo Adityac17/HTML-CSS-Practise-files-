@@ -1,29 +1,24 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 05</title>
-    <link rel="stylesheet" href="./t5.css">
+<style>
+  .ball {
+    filter: drop-shadow(0 0 15px blue);
+  }
+</style>
 </head>
-<body>
-    <div class="task5">
-    Task 5 ( content same as task 4 but expermienting with gap values )
-    <br> This is a lot of text to test the auto row. 
-    <br> The row should grow to fit all of this content!
-    <br> loreo wqaser werete qert
-            <p>
-                Answer 01:- It adds space strictly between the rows and columns .
 
-                Answer 02:- margin adds space around an element 
-                and gaps add space btwn the elements
+<body style="margin:0">
 
-                Answer 03:- no it doesnt affect the container size
+<svg width="100%" height="100%" viewBox="0 0 1000 600">
 
-                Answer 04:- yes gaps can only be sued for rows and columns
+  <circle cx="100" cy="300" r="30" fill="blue" class="ball">
+    <animate attributeName="cx"
+             from="100" to="900"
+             dur="3s" repeatCount="indefinite"/>
+  </circle>
 
-                Answer 05:- fixes all spacing issues and give it a more cleaner look
-            </p>
-    </div>
+</svg>
+
 </body>
 </html>
