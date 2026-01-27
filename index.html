@@ -1,392 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Fitness Hub</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Browser Discovery Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      body {
-        font-family: Arial, sans-serif;
-        min-height: 100vh;
-        color: #fff;
-        background: url("https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg")
-          no-repeat center center fixed;
-        background-size: cover;
-        overflow-x: hidden;
-      }
-
-      header {
-        text-align: center;
-        padding: 30px 20px;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(5px);
-      }
-
-      header h1 {
-        font-size: 2.5em;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      }
-
-      nav {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 15px;
-        background: rgba(0, 0, 0, 0.5);
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 5px 10px;
-        transition: 0.3s;
-      }
-
-      nav a:hover {
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 5px;
-      }
-
-      main {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 20px;
-        padding: 20px;
-        position: relative;
-        z-index: 2;
-      }
-
-      aside {
-        background: rgba(0, 0, 0, 0.6);
-        padding: 15px;
-        border-radius: 10px;
-      }
-
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 15px;
-        overflow-x: auto;
-        padding-bottom: 10px;
-        scroll-behavior: smooth;
-      }
-
-      .card {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-        text-align: center;
-        backdrop-filter: blur(5px);
-        transition:
-          transform 0.3s,
-          box-shadow 0.3s;
-        cursor: pointer;
-        position: relative;
-      }
-
-      .card::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          120deg,
-          rgba(255, 87, 34, 0.4),
-          rgba(255, 193, 7, 0.4)
-        );
-        opacity: 0.3;
-        transition: opacity 0.5s;
-      }
-
-      .card:hover::after {
-        opacity: 0.6;
-      }
-
-      .card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        display: block;
-        border-radius: 10px;
-      }
-
-      .card p {
-        padding: 10px;
-        font-weight: bold;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-      }
-
-      .card:hover {
-        transform: translateY(-10px) scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-      }
-
-      footer {
-        text-align: center;
-        padding: 15px;
-        background: rgba(0, 0, 0, 0.6);
-        margin-top: 20px;
-        backdrop-filter: blur(5px);
-      }
-
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          45deg,
-          rgba(255, 87, 34, 0.2),
-          rgba(255, 193, 7, 0.2)
-        );
-        z-index: 1;
-      }
-    </style>
-  </head>
-
-  <body>
     <header>
-      <h1>Personal Fitness Hub</h1>
-      <p>Your daily dose of wellness, workouts, and nutrition.</p>
+        <h1>Browser Discovery Lab</h1>
+        <p>Resize window  to 175% to see layout changes (Task 2)</p>
     </header>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Workouts</a>
-      <a href="#">Nutrition</a>
-      <a href="#">Mental Health</a>
-      <a href="#">Join Club</a>
-    </nav>
-
-    <main>
-      <aside>
-        <h3>Workout Types</h3>
-        <br />
-        <ul>
-          <li><input type="checkbox" /> Body Building</li>
-          <li><input type="checkbox" /> Calishtenics</li>
-          <li><input type="checkbox" /> Yoga & Flex</li>
-          <li><input type="checkbox" /> Cardio & HIIT</li>
-        </ul>
-        <br />
-        <h4>Why Fitness Matters:</h4>
-        <ul>
-          <li><strong>Strength:</strong> Builds muscle & metabolism.</li>
-          <li><strong>Cardio:</strong> Improves heart health.</li>
-          <li><strong>Mind:</strong> Reduces stress & anxiety.</li>
-        </ul>
-      </aside>
-
-      <section class="gallery">
-        <div class="card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrT90EAAdiD_02g3q8BKIQLPAOpCgzcMFteQ&s"
-            alt="Yoga Pose"
-          />
-          <p>Morning Yoga</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/SEEDs/1800x1200-health-benefits-of-running-seed.jpg?resize=750px:*&output-quality=75"
-            alt="Running"
-          />
-          <p>Cardio Run</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://fitnessvolt.com/wp-content/uploads/2018/06/David-Laid-Profile.jpg"
-            alt="Gym Workout"
-          />
-          <p>Weight Lifting</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://www.trainerroad.com/blog/wp-content/uploads/2021/11/benefits-of-cycling-768x372.jpg"
-            alt="Cycling"
-          />
-          <p>Cycling Track</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://s.yimg.com/ny/api/res/1.2/wXqt3M1Kz0BjvGJVAMaRFw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MDtjZj13ZWJw/https://media.zenfs.com/en/toms_guide_826/b50e52f0a72c3c31277f92788e50d722"
-            alt="Pilates"
-          />
-          <p>Core Pilates</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://www.health.com/thmb/Yv4HuoQyNbHNNxgtOTm63zqxurQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-Swimming-080c78802f384a4687df5a3b13d5611e-3719a8e40a3c4c43a63a4d795e47c505.jpg"
-            alt="Swimming"
-          />
-          <p>Swimming</p>
-        </div>
-      </section>
-
-      <section class="gallery">
-        <div class="card">
-          <img
-            src="https://natracure.com/cdn/shop/articles/eating-clean-101-what-does-it-mean-for-beginners-natracure.jpg?v=1765978415"
-            alt="Healthy Food"
-          />
-          <p>Clean Eating</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://res.cloudinary.com/jerrick/image/upload/v1682970975/6450195f19d3a5001ded5a58.jpg"
-            alt="Meditation"
-          />
-          <p>Mindfulness</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://www.nps.gov/grte/planyourvisit/images/Hiking-NPS-Photo-J-Tobiason_3.jpg?maxwidth=1300&maxheight=1300&autorotate=false&format=webp"
-            alt="Hiking"
-          />
-          <p>Nature Hikes</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://www.nutritionnews.abbott/content/dam/an/newsroom/us/en/images/articles/healthy-living/diet-wellness/what-is-Hydration-on-a-cellular-level-hero_725x316@2x.png"
-            alt="Hydration"
-          />
-          <p>Hydration</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://i.pinimg.com/originals/59/9e/71/599e71bf0da3ad5f06ffcb2090fa18c3.jpg"
-            alt="Home Workout"
-          />
-          <p>Home Gym</p>
-        </div>
-        <div class="card">
-          <img
-            src="https://www.opaortho.com/wp-content/uploads/2024/08/stretching-exercises-for-flexibility.png"
-            alt="Stretching"
-          />
-          <p>Recovery</p>
-        </div>
-      </section>
-
-      <aside>
-        <h3>Diet Plans</h3>
-        <br />
-        <ul>
-          <li><input type="checkbox" /> 2gm per kg of body weight</li>
-          <li><input type="checkbox" /> 3L of Water Daily</li>
-          <li><input type="checkbox" /> 50 % protien 30% carbs 20% carbs</li>
-          <li><input type="checkbox" /> Intermittent Fasting</li>
-        </ul>
-
-        <br />
-        <h4>Wellness Tips:</h4>
-        <ul>
-          <li>Sleep 8 hours daily.</li>
-          <li>Meditate for 20 mins Daily.</li>
-          <li>Cold Shower.</li>
-        </ul>
-
-        <section class="gallery">
-          <div class="card">
-            <img
-              src="https://www.bulk.com/uk/the-core/wp-content/uploads/2023/07/push-day-workout-blog-image-1-1012x674.jpg"
-              alt="Push Day"
-            />
-            <p>Push Day</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://www.ativafit.com/cdn/shop/articles/Pull_Day_Workout_featured_image_6d85ac2f-badf-4891-9676-87af43f5b196.jpg?v=1752005578"
-              alt="Pull Day"
-            />
-            <p>Pull Day</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://i.ytimg.com/vi/8zWDuWKdBZU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDdWfFdgfSit2HMNqa56WWeYJxxsw"
-              alt="Leg Day"
-            />
-            <p>Leg Day</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://static.wixstatic.com/media/a0e49f_266d582551a74945afdd7848988766f5~mv2.png/v1/fill/w_640,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a0e49f_266d582551a74945afdd7848988766f5~mv2.png"
-              alt="Calisthenics"
-            />
-            <p>Calisthenics</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://gmb.io/wp-content/uploads/2015/03/Junior-Planche.jpg"
-              alt="Planche"
-            />
-            <p>Planche</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://static1.squarespace.com/static/5d31ed671abe780001b2964d/t/5d6eec80d4a4940001d203e5/1567550612081/14_Handstand%28AdhoMukhaVrkasana%29-10_header.jpg?format=1500w"
-              alt="Hand Stand"
-            />
-            <p>Hnadstand</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://i.ytimg.com/vi/Bz-on85oauM/maxresdefault.jpg"
-              alt="L-Sit"
-            />
-            <p>L-Sit</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://cdn.prod.website-files.com/674732398a7cbc934e4c2f56/67729e277bf6af1d800e5912_675c0473aec4a6e825877229_Calixpert-Slow-Muscle-Up.webp"
-              alt="Muscle up"
-            />
-            <p>Muscle Up</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://i.ytimg.com/vi/CJ3HK4TLZZw/maxresdefault.jpg"
-              alt="Dragon Fly"
-            />
-            <p>Dragon Fly</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://gravity.fitness/cdn/shop/articles/Calisthenics_Exercises_Every-Body_should_master_from_beginner_to_advanced.jpg?v=1711239686&width=2048"
-              alt="Front Lever"
-            />
-            <p>Front Lever</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://hips.hearstapps.com/hmg-prod/images/pistol-squat-regular-pistol-squat-233-1654102650.jpg?crop=0.563xw:0.839xh;0.208xw,0.161xh&resize=1200:*"
-              alt="Pistol Squat"
-            />
-            <p>Pistol Squat</p>
-          </div>
-          <div class="card">
-            <img
-              src="https://i.redd.it/who-you-got-v0-o1q7j8mekomb1.jpg?width=631&format=pjpg&auto=webp&s=0f8749bf951db3723060be82ddf2b2131789a550"
-              alt="Baki Hanma"
-            />
-            <p>Baki Hanma</p>
-          </div>
+    <main class="container">
+        <section class="card">
+            <h2>Task 3: Memory Experiment</h2>
+            <p>Enter your name. Refresh the page. It stays!</p>
+            <input type="text" id="username" placeholder="Type name here...">
+            <button onclick="saveName()">Save to Memory</button>
+            <p id="greeting"></p>
         </section>
-      </aside>
+
+        <section class="card">
+            <h2>Task 4: Offline Tracker</h2>
+            <div class="stats-box">
+                <p>Total Visits: <span id="visit-count">0</span></p>
+                <p>Last Visit: <span id="last-time">Never</span></p>
+            </div>
+            <p><em>Try turning off WiFi and reloading!</em></p>
+        </section>
+
+        <section class="card observation">
+            <h2>Final Observations</h2>
+            <ul>
+                <li><strong>Viewport:</strong> Without the tag, the page zoomed out and text became unreadable on mobile.</li>
+                <li><strong>Breakpoints:</strong> Layout shifts from single column to double column at 768px.</li>
+                <li><strong>Offline Data:</strong> Visit count and Name persisted even without internet connection.</li>
+            </ul>
+        </section>
     </main>
 
-    <footer>
-      <p>© 2026 Vitality Fitness Hub — Healthy Lifestyle Design</p>
-    </footer>
-  </body>
+    <script>
+        const nameInput = document.getElementById('username');
+        const greetingDisplay = document.getElementById('greeting');
+
+        if(localStorage.getItem('savedName')) {
+            nameInput.value = localStorage.getItem('savedName');
+            greetingDisplay.textContent = "Welcome back, " + localStorage.getItem('savedName');
+        }
+
+        function saveName() {
+            const name = nameInput.value;
+            localStorage.setItem('savedName', name);
+            greetingDisplay.textContent = "Saved! Refresh to test persistence.";
+        }
+
+        let visits = localStorage.getItem('visitCount') || 0;
+        visits++; 
+        localStorage.setItem('visitCount', visits);
+        document.getElementById('visit-count').textContent = visits;
+
+        const now = new Date();
+        const lastVisit = localStorage.getItem('lastVisitTime') || "First time!";
+        document.getElementById('last-time').textContent = lastVisit;
+        localStorage.setItem('lastVisitTime', now.toLocaleString());
+    </script>
+
+</body>
 </html>
