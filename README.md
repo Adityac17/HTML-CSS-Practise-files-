@@ -1,3 +1,19 @@
+
+4TH FEB HW Screen Recording 
+
+https://github.com/user-attachments/assets/dc92a79f-4e7d-4a0b-bc76-d97fd500a54f
+
+
+https://github.com/user-attachments/assets/e8ef7b2c-1944-4d37-933a-473933f7d113
+
+
+
+
+
+
+
+
+
 ANSWERS TO THE QUESTION OF THE HOMEWORK OD 27TH JAN 2026 BY PROF. POONAM
 
 1. Websites use responsive design to automatically rearrange content to fit the vastly different screen widths and pixel densities of each device.
