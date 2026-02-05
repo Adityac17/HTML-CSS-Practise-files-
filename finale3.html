@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Leclerc Cinematic Background</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    font-family: 'Brush Script MT', 'Cursive', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+  }
+
+  .bg-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0; 
+    transform: scale(1.1); 
+    animation: slideShow 32s linear infinite;
+  }
+
+  .bg-slide:nth-child(1) { animation-delay: 0s; }
+  .bg-slide:nth-child(2) { animation-delay: 4s; }
+  .bg-slide:nth-child(3) { animation-delay: 8s; }
+  .bg-slide:nth-child(4) { animation-delay: 12s; }
+  .bg-slide:nth-child(5) { animation-delay: 16s; }
+  .bg-slide:nth-child(6) { animation-delay: 20s; }
+  .bg-slide:nth-child(7) { animation-delay: 24s; }
+  .bg-slide:nth-child(8) { animation-delay: 28s; }
+
+  @keyframes slideShow {
+    0% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    4% {
+      opacity: 1; 
+    }
+    12.5% {
+      opacity: 1; 
+      transform: scale(1); 
+    }
+    16.5% {
+      opacity: 0; 
+    }
+    100% {
+      opacity: 0; 
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 0;
+    pointer-events: none; 
+  }
+
+  .signature-wrapper {
+    position: relative;
+    z-index: 10; 
+    width: 90vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signature-text {
+    font-size: 15vw; 
+    stroke: #ffffff; 
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    
+    fill: rgba(255, 40, 0, 0);
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: writeAndFill 5s cubic-bezier(0.7, 0, 0.3, 1) forwards infinite;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.9));
+  }
+
+  .underline {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    width: 0%;
+    height: 6px;
+    background: #ff2800; 
+    box-shadow: 0 0 25px #ff2800;
+    border-radius: 10px;
+    animation: zipLine 5s ease-in-out infinite;
+  }
+
+  @keyframes writeAndFill {
+    0% { stroke-dashoffset: 2000; fill: rgba(255, 40, 0, 0); stroke: #ffffff; }
+    40% { stroke-dashoffset: 0; fill: rgba(255, 40, 0, 0); stroke: #ffffff; }
+    60% { stroke-dashoffset: 0; fill: #ff2800; stroke: #ff2800; }
+    85% { opacity: 1; stroke-dashoffset: 0; fill: #ff2800; stroke: #ff2800; }
+    100% { opacity: 0; stroke-dashoffset: 0; fill: #ff2800; stroke: #ff2800; }
+  }
+
+  @keyframes zipLine {
+    0%, 50% { width: 0%; left: 15%; opacity: 0; }
+    55% { opacity: 1; }
+    65% { width: 70%; left: 15%; }
+    75% { width: 0%; left: 85%; }
+    100% { width: 0%; left: 85%; opacity: 0; }
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="bg-container">
+    <img class="bg-slide" src="3.png" alt="Background 1">
+    <img class="bg-slide" src="4.png" alt="Background 2">
+    <img class="bg-slide" src="5.png" alt="Background 3">
+    <img class="bg-slide" src="2.png" alt="Background 4">
+    <img class="bg-slide" src="6.png" alt="Background 5">
+    <img class="bg-slide" src="7.png" alt="Background 6">
+    <img class="bg-slide" src="1.png" alt="Background 7">
+    <img class="bg-slide" src="charles Leclerc.jpeg" alt="Background 8">
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="signature-wrapper">
+    <svg width="100%" height="100%">
+      <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" class="signature-text">
+        Charles Leclerc
+      </text>
+    </svg>
+    <div class="underline"></div>
+  </div>
+
+</body>
+</html>
