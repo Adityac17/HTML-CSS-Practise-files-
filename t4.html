@@ -1,49 +1,159 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-html,body{
-  margin:0;
-  width:100%;
-  height:100%;
-}
-svg{
-  width:100vw;
-  height:100vh;
-}
-.face{
-  filter: drop-shadow(0 0 25px rgb(123, 255, 0));
-}
-</style>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary-color: #e24a4a;
+      --secondary-color: #f39c12;
+      --bg-color: #f4f7f6;
+      --text-color: #2c3e50;
+      --card-bg: #ffffff;
 
+      --border-radius: 12px;
+      --space-sm: 8px;
+      --space-md: 20px;
+      --space-lg: 50px;
+
+      --font-base: 16px;
+      --font-heading: 42px;
+    }
+
+    body.dark-theme {
+      --bg-color: #1a1a2e;
+      --text-color: #e0e0e0;
+      --primary-color: #a24ba2;
+      --card-bg: #16213e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      font-size: var(--font-base);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--border-radius);
+      border: none;
+      cursor: pointer;
+      font-size: var(--font-base);
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-md) var(--space-lg);
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .hero {
+      text-align: center;
+      padding: var(--space-lg);
+      background-color: var(--card-bg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero h1 {
+      font-size: var(--font-heading);
+      color: var(--primary-color);
+      margin-bottom: var(--space-sm);
+    }
+
+    .card-container {
+      display: flex;
+      gap: var(--space-md);
+      padding: 0 var(--space-lg);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: var(--space-md);
+      border-radius: var(--border-radius);
+      flex: 1;
+      min-width: 250px;
+      max-width: 350px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: var(--space-lg);
+      margin-top: var(--space-lg);
+      border-top: 1px solid var(--primary-color);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
 <body>
 
-<svg viewBox="0 0 1920 1080">
+  <nav>
+    <div class="logo"><strong>Project :root </strong></div>
+    <button class="btn">💰Jobs💰</button>
+  </nav>
 
-  <circle cx="960" cy="540" r="300" fill="yellow" class="face"/>
+  <header class="hero">
+    <h1>CSS Design</h1>
+    <p>This is the place where AI can't take your jobs</p>
+    <br>
+    <button class="btn theme-toggle" onclick="toggleTheme()">Let's Upgrade</button>
+  </header>
 
-  <circle cx="860" cy="470" r="20" fill="black">
-    <animate
-      attributeName="r"
-      values="20;20;5;20"
-      keyTimes="0;0.9;0.95;1"
-      dur="2s"
-      repeatCount="indefinite"/>
-  </circle>
+  <main class="card-container">
+    <div class="card">
+      <h3>Heading 01</h3>
+      <p>This card shows you how to get free <br> 💰Money💰</p>
+    </div>
 
-  <circle cx="1060" cy="470" r="20" fill="black">
-    <animate
-      attributeName="r"
-      values="20;20;5;20"
-      keyTimes="0;0.9;0.95;1"
-      dur="2s"
-      repeatCount="indefinite"/>
-  </circle>
+    <div class="card">
+      <h3>Heading 02</h3>
+      <p>This card shows you how to get jobs</p>
+    </div>
 
-  <line x1="860" y1="650" x2="1060" y2="650"
-        stroke="black" stroke-width="20"/>
+    <div class="card">
+      <h3>Heading 03</h3>
+      <p>This card changes color just like she does</p>
+    </div>
+  </main>
 
-</svg>
+  <footer>
+    <p>&copy; 6th Feb 2026 Assignment HTML & CSS by Aditya Sunil Chouksey, Harsh Kumar and Janmesh Rohida</p>
+  </footer>
+
+  
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+  </script>
 
 </body>
 </html>
