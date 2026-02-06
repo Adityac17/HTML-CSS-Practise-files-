@@ -3,7 +3,7 @@
 
 
 
-6th feb hw by adotya sunil chouksey, harsh kumar and janmesh rohida
+6th feb hw by aditya sunil chouksey, harsh kumar and janmesh rohida
 https://github.com/user-attachments/assets/44b63ae1-dd7c-464f-9d7e-fb3d4224539e
 
 
