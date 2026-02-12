@@ -1,0 +1,162 @@
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9; /* Light grey background */
+    height: 100vh;
+    overflow: hidden; /* Prevents double scrollbars */
+}
+
+/* --- LAYOUT STRUCTURE --- */
+.dashboard-container {
+    display: flex; /* Creates the Side-by-Side layout */
+    height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 250px; /* Fixed width */
+    background-color: #111827; /* Dark Navy/Black */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+.sidebar-brand {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #1f2937; /* Slightly lighter for logo area */
+    border-bottom: 1px solid #374151;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.sidebar-menu li a {
+    display: block;
+    color: #9ca3af;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: 0.3s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li.active a {
+    color: white;
+    background-color: #1f2937;
+    border-left: 4px solid #3b82f6; /* Blue accent line */
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Allows scrolling inside content */
+}
+
+/* --- TOP HEADER --- */
+.top-bar {
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes Search left, User right */
+    padding: 0 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 8px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    outline: none;
+    background-color: #f9fafb;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #374151;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- DASHBOARD CARDS --- */
+.stats-container {
+    padding: 30px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1; /* Makes all cards equal width */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Styles for White Cards */
+.white-card {
+    background-color: white;
+    color: #111827;
+}
+
+.white-card h3 {
+    color: #6b7280;
+}
+
+/* Styles for Blue Cards */
+.blue-card {
+    background-color: #2563eb; /* Royal Blue */
+    color: white;
+}
+
+.blue-card h3 {
+    color: #dbeafe;
+}
+
+/* --- RESPONSIVE ADJUSTMENT --- */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .sidebar-menu {
+        display: none; /* Hide menu on mobile for simplicity */
+    }
+    .stats-row {
+        flex-direction: column;
+    }
+}
