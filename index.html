@@ -1,71 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Browser Discovery Task</title>
+    <title>CSS Flex & Grid Animations Assignment</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Browser Discovery Lab</h1>
-        <p>Resize window  to 175% to see layout changes (Task 2)</p>
-    </header>
+    <div class="assignment-wrapper">
 
-    <main class="container">
-        <section class="card">
-            <h2>Task 3: Memory Experiment</h2>
-            <p>Enter your name. Refresh the page. It stays!</p>
-            <input type="text" id="username" placeholder="Type name here...">
-            <button onclick="saveName()">Save to Memory</button>
-            <p id="greeting"></p>
-        </section>
-
-        <section class="card">
-            <h2>Task 4: Offline Tracker</h2>
-            <div class="stats-box">
-                <p>Total Visits: <span id="visit-count">0</span></p>
-                <p>Last Visit: <span id="last-time">Never</span></p>
+        <div class="task-box">
+            <div class="task-label">1. Animated Profile Card</div>
+            <div class="task-content t1-container">
+                <div class="t1-card">
+                    <h3>John Doe</h3>
+                    <p>Web Developer</p>
+                    <div class="t1-socials">
+                        <span>FB</span>
+                        <span>IG</span>
+                        <span>LI</span>
+                    </div>
+                </div>
             </div>
-            <p><em>Try turning off WiFi and reloading!</em></p>
-        </section>
+        </div>
 
-        <section class="card observation">
-            <h2>Final Observations</h2>
-            <ul>
-                <li><strong>Viewport:</strong> Without the tag, the page zoomed out and text became unreadable on mobile.</li>
-                <li><strong>Breakpoints:</strong> Layout shifts from single column to double column at 768px.</li>
-                <li><strong>Offline Data:</strong> Visit count and Name persisted even without internet connection.</li>
-            </ul>
-        </section>
-    </main>
+        <div class="task-box">
+            <div class="task-label">2. Responsive Navigation</div>
+            <div class="task-content">
+                <ul class="t2-nav">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
 
-    <script>
-        const nameInput = document.getElementById('username');
-        const greetingDisplay = document.getElementById('greeting');
+        <div class="task-box">
+            <div class="task-label">3. 3x3 Product Grid</div>
+            <div class="task-content t3-grid">
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+                <div class="t3-item"><div class="t3-box"></div></div>
+            </div>
+        </div>
 
-        if(localStorage.getItem('savedName')) {
-            nameInput.value = localStorage.getItem('savedName');
-            greetingDisplay.textContent = "Welcome back, " + localStorage.getItem('savedName');
-        }
+        <div class="task-box">
+            <div class="task-label">4. Hero Section</div>
+            <div class="task-content t4-hero">
+                <div class="t4-text">
+                    <h2>Welcome</h2>
+                    <p>To the future.</p>
+                    <button class="t4-btn">Explore</button>
+                </div>
+                <div class="t4-img"></div>
+            </div>
+        </div>
 
-        function saveName() {
-            const name = nameInput.value;
-            localStorage.setItem('savedName', name);
-            greetingDisplay.textContent = "Saved! Refresh to test persistence.";
-        }
+        <div class="task-box">
+            <div class="task-label">5. Pricing Table</div>
+            <div class="task-content t5-container">
+                <div class="t5-card">Basic</div>
+                <div class="t5-card">Pro</div>
+                <div class="t5-card">Ent</div>
+            </div>
+        </div>
 
-        let visits = localStorage.getItem('visitCount') || 0;
-        visits++; 
-        localStorage.setItem('visitCount', visits);
-        document.getElementById('visit-count').textContent = visits;
+        <div class="task-box">
+            <div class="task-label">6. Asymmetrical Gallery</div>
+            <div class="task-content t6-grid">
+                <div class="t6-item t6-span-col">1 (Span Col)</div>
+                <div class="t6-item">2</div>
+                <div class="t6-item">3</div>
+                <div class="t6-item t6-span-row">4 (Row)</div>
+                <div class="t6-item">5</div>
+                <div class="t6-item">6</div>
+            </div>
+        </div>
 
-        const now = new Date();
-        const lastVisit = localStorage.getItem('lastVisitTime') || "First time!";
-        document.getElementById('last-time').textContent = lastVisit;
-        localStorage.setItem('lastVisitTime', now.toLocaleString());
-    </script>
+        <div class="task-box">
+            <div class="task-label">7. Dashboard Layout</div>
+            <div class="task-content t7-layout">
+                <div class="t7-head"></div>
+                <div class="t7-side"></div>
+                <div class="t7-main">
+                    <div class="t7-load"></div>
+                    <div class="t7-load" style="width: 80%"></div>
+                    <div class="t7-load" style="width: 60%"></div>
+                </div>
+            </div>
+        </div>
 
+        <div class="task-box">
+            <div class="task-label">8. Vertical Timeline</div>
+            <div class="task-content t8-box">
+                <div class="t8-item">
+                    <div class="t8-dot"></div>
+                    <div class="t8-content">Event 1</div>
+                </div>
+                <div class="t8-item">
+                    <div class="t8-dot"></div>
+                    <div class="t8-content">Event 2</div>
+                </div>
+                <div class="t8-item">
+                    <div class="t8-dot"></div>
+                    <div class="t8-content">Event 3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">9. Statistics Section</div>
+            <div class="task-content t9-grid">
+                <div class="t9-card">100+</div>
+                <div class="t9-card">50k</div>
+                <div class="t9-card">200</div>
+                <div class="t9-card">4.9</div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">10. Floating Testimonials</div>
+            <div class="task-content t10-container">
+                <div class="t10-card">"Great service!"</div>
+                <div class="t10-card">"Highly recommend."</div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">11. CSS Loader</div>
+            <div class="task-content t11-box">
+                <div class="t11-loader"></div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">12. Magazine Layout</div>
+            <div class="task-content t12-grid">
+                <div class="t12-art t12-feat">Featured Article (Span)</div>
+                <div class="t12-art">News 1</div>
+                <div class="t12-art">News 2</div>
+                <div class="t12-art">News 3</div>
+                <div class="t12-art">News 4</div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">13. Animated Buttons</div>
+            <div class="task-content t13-box">
+                <button class="t13-btn b1">Fill</button>
+                <button class="t13-btn b2">Round</button>
+                <button class="t13-btn b3">Scale</button>
+                <button class="t13-btn b4">Shadow</button>
+                <button class="t13-btn b5">Space</button>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">14. Split Screen</div>
+            <div class="task-content t14-box">
+                <div class="t14-half t14-left">Left</div>
+                <div class="t14-half t14-right">Right</div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">15. Flip Card</div>
+            <div class="task-content t15-box">
+                <div class="t15-inner">
+                    <div class="t15-f">Front</div>
+                    <div class="t15-b">Back</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">16. Responsive Footer</div>
+            <div class="task-content t16-foot">
+                <div class="t16-col"><h4>Col 1</h4><a href="#">Link</a></div>
+                <div class="t16-col"><h4>Col 2</h4><a href="#">Link</a></div>
+                <div class="t16-col"><h4>Col 3</h4><a href="#">Link</a></div>
+                <div class="t16-col"><h4>Col 4</h4><a href="#">Link</a></div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">17. Animated Background</div>
+            <div class="task-content t17-box">
+                <div class="t17-txt">Gradient Flow</div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">18. E-commerce Layout</div>
+            <div class="task-content t18-grid">
+                <div class="t18-side">Filter</div>
+                <div class="t18-prods">
+                    <div class="t18-item">Prod 1<br><button class="t18-btn">Add</button></div>
+                    <div class="t18-item">Prod 2<br><button class="t18-btn">Add</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">19. Progress Bars</div>
+            <div class="task-content t19-box">
+                <div class="t19-bar-bg"><div class="t19-fill f-80"></div></div>
+                <div class="t19-bar-bg"><div class="t19-fill f-50"></div></div>
+            </div>
+        </div>
+
+        <div class="task-box">
+            <div class="task-label">20. Advanced Creative</div>
+            <div class="task-content t20-box">
+                <div class="t20-shp s1"></div>
+                <div class="t20-shp s2"></div>
+                <div class="t20-shp s3"></div>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
